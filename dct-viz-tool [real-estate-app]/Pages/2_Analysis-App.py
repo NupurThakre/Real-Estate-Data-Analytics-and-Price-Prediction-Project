@@ -12,8 +12,8 @@ plt.rcParams['font.family'] = 'DejaVu Sans'  # suppress Arial warning
 st.set_page_config(page_title="Plotting Demo")
 st.title('Analytics')
 
-new_df = pd.read_csv('datasets/data_viz1.csv')
-feature_text = pickle.load(open('datasets/feature_text.pkl', 'rb'))
+new_df = pd.read_csv(r'P:\Real Estate Captone Project\dct-viz-tool [real-estate-app]\datasets\data_viz1.csv')
+feature_text = pickle.load(open(r'P:\Real Estate Captone Project\dct-viz-tool [real-estate-app]\datasets\feature_text.pkl', 'rb'))
 
 # ── Geomap ──────────────────────────────────────────────────────────────────
 group_df = new_df.groupby('sector')[['price', 'price_per_sqft', 'built_up_area', 'latitude', 'longitude']].mean()
